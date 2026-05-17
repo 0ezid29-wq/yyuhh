@@ -33,13 +33,12 @@ jobs:
           xcodebuild \
             -project MeloNX/src/MeloNX/MeloNX.xcodeproj \
             -scheme MeloNX \
-            -configuration Release \
+            -configuration Debug \
             -sdk iphoneos \
             -destination 'generic/platform=iOS' \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
-            SWIFT_OPTIMIZATION_LEVEL=-Onone \
             -derivedDataPath build
 
       - name: Build with xcodebuild (attempt 2 - fixes Undefined Symbols)
@@ -47,13 +46,12 @@ jobs:
           xcodebuild \
             -project MeloNX/src/MeloNX/MeloNX.xcodeproj \
             -scheme MeloNX \
-            -configuration Release \
+            -configuration Debug \
             -sdk iphoneos \
             -destination 'generic/platform=iOS' \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
-            SWIFT_OPTIMIZATION_LEVEL=-Onone \
             -derivedDataPath build
 
       - name: Package into IPA
