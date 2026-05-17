@@ -39,6 +39,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            SWIFT_OPTIMIZATION_LEVEL=-Onone \
             -derivedDataPath build
 
       - name: Build with xcodebuild (attempt 2 - fixes Undefined Symbols)
@@ -52,6 +53,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            SWIFT_OPTIMIZATION_LEVEL=-Onone \
             -derivedDataPath build
 
       - name: Package into IPA
