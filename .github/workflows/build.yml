@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Clone MeloNX source
         run: |
-          git clone https://git.ryujinx.app/melonx/emu.git MeloNX
+          git clone https://github.com/VertexSelection/MeloVertex.git MeloNX
           cd MeloNX
           git checkout XC-ios-ht
 
